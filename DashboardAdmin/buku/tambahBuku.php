@@ -77,10 +77,10 @@ $kodebuku = $huruf . sprintf("%04s", $urutan);
                   <input class="form-control" type="file" name="cover" id="formFileMultiple" required>
                </div>
 
-               <div class="mb-3">
+                <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Id Buku</label>
-                  <input type="text" class="form-control" name="id_buku" id="exampleFormControlInput1"
-                     placeholder="example zz01" required>
+                  <input type="text" class="form-control" name="id_buku" value="<?php echo $kodebuku ?>" readonly
+                     style=" background-color: #3333335b ;" required>
                </div>
             </div>
 
