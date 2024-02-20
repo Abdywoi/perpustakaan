@@ -14,6 +14,13 @@ if (isset($_POST["tambah"])) {
     </script>";
    }
 }
+    $query = mysqli_query($connection, "SELECT max(id_buku) as kodeTerbesar FROM buku");
+$dataid = mysqli_fetch_array($query);
+$kodebuku = $dataid['kodeTerbesar'];
+$urutan = (int) substr($kodebuku, -4, 4);
+$urutan++;
+$huruf = "ZID";
+$kodebuku = $huruf . sprintf("%04s", $urutan);  
 ?>
 
 <!DOCTYPE html>
